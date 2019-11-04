@@ -1,0 +1,33 @@
+{
+  "name": "elm-firebase-starter",
+  "version": "1.0.0",
+  "description": "elm-firebase-starter",
+  "scripts": {
+    "build/all": "yarn build/app && yarn build/not_found",
+    "build/app": "webpack --verbose --config src/app/webpack.config.js",
+    "build/not_found": "webpack --verbose --config src/not_found/webpack.config.js",
+    "elm-ts": "elm-typescript-interop",
+    "deploy/all": "firebase deploy",
+    "deploy/hosting": "firebase deploy --only hosting",
+    "deploy/functions": "firebase deploy --only functions",
+    "deploy/storage": "firebase deploy --only storage",
+    "deploy/firestore": "firebase deploy --only firestore"
+  },
+  "author": "misoton665",
+  "license": "MIT",
+  "devDependencies": {
+    "elm": "0.19.0-no-deps",
+    "elm-typescript-interop": "0.0.15",
+    "elm-webpack-loader": "6.0.0",
+    "file-loader": "4.2.0",
+    "firebase-tools": "7.2.2",
+    "html-webpack-plugin": "3.2.0",
+    "ts-loader": "^6.0.4",
+    "typescript": "3.5.3",
+    "webpack": "4.39.1",
+    "webpack-cli": "3.3.6"
+  },
+  "dependencies": {
+    "firebase": "6.3.5"
+  }
+}
